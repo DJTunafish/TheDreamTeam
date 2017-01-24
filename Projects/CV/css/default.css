@@ -1,0 +1,25 @@
+#headshot {
+    position:relative;
+}
+
+#picture{
+    padding-right:10px;
+    float:left
+}
+
+h2 {
+    margin-left:0;
+}
+
+#list {
+    display:inline-block;
+    padding-left:60px;
+}
+
+h1 {
+    text-align:center;
+}
+
+h3 {
+    text-align:center;
+}

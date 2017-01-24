@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+{{ >partials/head }}
+
+
+<body>
+	{{ >partials/header}}
+	<p> {{ text }} </p>
+	<table>
+		 {{#tasks}}
+        <tr>
+            <td><a href="list/edit?id={{id}}">{{id}}</a></td>
+            <td>{{ text }}</td>
+            <td>{{ dateTime }}</td>
+            <td>{{ done }}</td>
+        </tr>
+        {{/tasks}}
+
+	</table>
+	<a href="/todo/list/add"> New note </a> {{ >partials/footer }}
+</body>
+
+</html>

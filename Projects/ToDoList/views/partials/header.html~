@@ -1,0 +1,5 @@
+<h1> WEB TODO </h1>
+<p>
+    Logged in as: {{session.currentUser}}
+    <a href="/todo/logout">Logout</a>
+</p>

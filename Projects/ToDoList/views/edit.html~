@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+{{ >partials/head }}
+
+<body>
+	{{ >partials/header}}
+	<p> Edit {{ note.id}}</p>
+
+	<form action="/todo/list/edit" method="post">
+		<table>
+			<tr>
+				<td><input id="id" type="text" name="id" value={{id}} /></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="text" value={{text}} /></td>
+			</tr>
+            <tr>
+				<td><input type="text" name="date" value={{date}} /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="Submit" /></td>
+			</tr>
+		</table>
+
+	</form <!-- Just a test -->
+
+	<a href="/todo/list" )> Cancel</a>
+	<p>{{ >partials/footer }}</p>
+</body>
+
+</html>

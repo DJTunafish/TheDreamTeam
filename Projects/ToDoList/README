@@ -1,0 +1,31 @@
+
+Very simple TODO list application (CRUD application)
+using NodeJS, the Express framework, Mocha and Mustache templates
+
+
+Purpose:
+  Using a server side MVC framework
+
+Test:
+ - There are some mocha test, see test/...
+
+Install
+  Install nodemon (simpler work flow)
+
+Run:
+  Move to dir with app.js file
+
+  $ nodemon     (not app.js after)
+
+  Visit localhost:3000
+
+Debug:
+  There is : node-debug tool (not tested)
+
+NOTE:
+  Project generated using express-generator (if you would like to start from scratch)
+
+      $ npm install express-generator -g
+      $ express express_todo
+      $ cd express_todo
+      $ npm install    (to download all dependencies)

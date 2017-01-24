@@ -1,0 +1,70 @@
+/*
+
+    Here you create a Table module usign the pseudo classical style
+    Use pure JS
+
+    - There should be an contructor function taking rows, cols, data (an array)
+      and a boolean to indicate if striped.
+    - The public API should have methods render and edit
+    - render should return a DOM representation of the table (reuse createTable!)
+    - edit should update the table data (i.e. change some index in data array)
+
+*/
+
+// Constructor function
+function Table(rows, cols, data, striped) {
+    this.rows = rows;
+    this.cols = cols;
+    this.data = data;
+    this.striped = striped;
+}
+
+Table.prototype = (function() {
+
+    // Public API
+    return {
+        // Must call this after new Table() to make table visible
+        render: function() {
+            console.log("render start");
+            var tbl = document.createElement("table");
+            var row = document.createElement("tr");
+            var rowNumber = 0;
+            var array = data.split(" ");
+            tbl.appendChild(row);    
+    
+            for (i = 0; i < this.rows*this.cols; i++) { 
+                console.log("render loop");
+                if(i % this.cols == 0 && i != 0){
+                    row = document.createElement("tr");
+                    tbl.appendChild(row);
+                    if(rowNumber % 2 == 0 && this.striped){
+                        row.style. backgroundColor = "#CCC";
+                    }
+                    rowNumber = rowNumber + 1;
+                }
+
+                var col = document.createElement("td");
+                if(rowNumber != 0){
+                    col.id = "td" + rowNumber + "" + (i%this.cols);
+                }else{
+                    col.id = "td" + rowNumber + "" + i;
+                }
+                row.appendChild(col);
+                if(i < array.length){
+                    col.innerHTML = array[i];
+                }else{
+                    col.innerHTML = "undefined";
+                }
+            }
+            
+            return tbl;
+        },
+
+        edit: function(row, col, value) {
+            if(row < this.rows && col < this.cols){
+                $("#td" + row + "" + "" + col).html(value);
+            }
+        }
+    };
+
+})();
