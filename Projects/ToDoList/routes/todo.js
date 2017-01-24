@@ -19,15 +19,15 @@ var currentUser = "";
 router.use("/list", list);
 
 router.get('/', function(req, res, next) {
-    res.render('todo', {text: 'Your TODO list on the Web'}, req.session.currentUser);
+    res.render('todo', {text: 'Your TODO list on the Web', currentUser:req.session.currentUser});
 });
 
 router.get('/login', function(req, res, next) {
-    res.render('login', {text:"Please fill in form", session:req.session});
+    res.render('login', {text:"Please fill in form", currentUser:req.session.currentUser});
 });
 
 router.get('/register', function(req, res, next) {
-    res.render('register');
+    res.render('register', {currentUser:req.session.currentUser});
 });
 
 router.get('/logout', function(req, res, next) {

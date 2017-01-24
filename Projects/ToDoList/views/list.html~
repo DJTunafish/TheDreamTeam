@@ -10,7 +10,7 @@
 	<table>
 		 {{#tasks}}
         <tr>
-            <td><a href="/edit?id={{id}}">{{id}}</a></td>
+            <td><a href="list/edit?id={{id}}">{{id}}</a></td>
             <td>{{ text }}</td>
             <td>{{ dateTime }}</td>
             <td>{{ done }}</td>
