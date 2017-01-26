@@ -1,0 +1,6 @@
+*** Object relational mapping with Node/Express/Sequelize
+
+To run
+  - nodemon
+
+  Visit localhost:3000/todo/list
