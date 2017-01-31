@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+{{ >partials/head }}
+
+<body>
+	{{ >partials/header}}
+	<p> {{ text }} </p>
+	<form action="/todo/list/delete" method="post">
+		<input type="hidden" name="id" value="{{note.id}}" />
+		<table>
+			{{#note}}
+			<tr>
+				<td>{{id}} </td>
+			</tr>
+			<tr>
+				<td>{{ text}}</td>
+			</tr>
+			<tr>
+				<td>{{ dateTime}}</td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="delete" value="Delete" /></td>
+			</tr>
+			{{/note}}
+		</table>
+	</form>
+	<a href="/todo/list " )> Cancel</a>
+	<p>{{ >partials/footer }}</p>
+</body>
+
+</html>
