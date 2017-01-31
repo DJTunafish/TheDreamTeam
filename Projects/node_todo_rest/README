@@ -1,0 +1,30 @@
+REST backend for the TodoList application
+(no page rendering here, just sending json to client)
+
+
+Purpose:
+  REST backend
+
+Install:
+    $ npm install
+
+	Need mocha, chai and requset for testing
+    $ npm install -g mocha
+    $ npm install chai
+    $ npm install request
+
+
+Compile:
+  -
+
+Test:
+ - There are some mocha test, see test/...
+ - Or use curl (manual or make a script)
+
+Run:
+  Move to dir with app.js file
+
+  $ npm install nodemon -g
+  $ nodemon     (not app.js after)
+
+  Visit localhost:3000

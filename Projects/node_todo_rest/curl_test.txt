@@ -1,0 +1,21 @@
+
+Testing using curl
+------------------
+
+# Get all notes
+curl -v -H "Accept: application/json" http://localhost:3000/list
+
+# Get single note
+curl -v -H "Accept: application/json" http://localhost:3000/list/1
+
+# Get primitive type
+curl -v -H "Accept: application/json" http://localhost:3000/list/count
+
+# Create a new note
+curl -v -X POST  http://localhost:3000/list --data "text=bla bla bla"
+
+# Update a note
+curl -v -X PUT http://localhost:3000/list/1 --data "text=updated&done=true"
+
+# Delete a note
+curl -v -X DELETE http://localhost:3000/list/1
